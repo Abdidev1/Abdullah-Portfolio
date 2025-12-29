@@ -3,37 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEC_DEV // PORTFOLIO</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NexFlow Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
 </head>
-<body>
-    <div class="scanlines"></div>
-    
-    <main class="cybe-container">
-        <header>
-            <h1 class="glitch" data-text="CORE_IDENTITY">CORE_IDENTITY</h1>
-            <p class="subtitle">> CYBERSECURITY ANALYST // GAME ARCHITECT</p>
-        </header>
+<body class="bg-[#0a0a0c] text-white">
 
-        <section class="terminal">
-            <div class="terminal-header">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="title">system_info.sh</span>
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-64 border-r border-white/10 flex flex-col p-6 bg-[#0d0d0f]">
+            <div class="flex items-center gap-3 mb-10">
+                <div class="w-8 h-8 bg-gradient-to-tr from-purple-500 to-blue-500 rounded-lg"></div>
+                <span class="text-xl font-bold tracking-tight">NexFlow</span>
             </div>
-            <div class="terminal-body">
-                <p><span class="prompt">$</span> run initialize_bio.exe</p>
-                <p class="output">Optimizing systems... Logic gates open. Crafting digital worlds and securing them from the void.</p>
-                <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+            
+            <nav class="space-y-2 flex-1">
+                <a href="#" class="flex items-center gap-3 p-3 rounded-xl bg-white/10 text-white">Dashboard</a>
+                <a href="#" class="flex items-center gap-3 p-3 rounded-xl text-white/50 hover:text-white hover:bg-white/5 transition-all">Analytics</a>
+                <a href="#" class="flex items-center gap-3 p-3 rounded-xl text-white/50 hover:text-white hover:bg-white/5 transition-all">Settings</a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto p-8 bg-gradient-to-br from-[#0a0a0c] to-[#12121a]">
+            <header class="flex justify-between items-center mb-10">
+                <h1 class="text-3xl font-semibold">Overview</h1>
+                <div class="flex items-center gap-4">
+                    <input type="text" placeholder="Search..." class="bg-white/5 border border-white/10 rounded-full py-2 px-6 focus:outline-none focus:border-purple-500">
+                    <div class="w-10 h-10 rounded-full bg-white/10 border border-white/10"></div>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass p-6 rounded-3xl">
+                    <p class="text-white/50 text-sm mb-1">Total Revenue</p>
+                    <h2 class="text-2xl font-bold">$42,390</h2>
+                </div>
+                <div class="glass p-6 rounded-3xl">
+                    <p class="text-white/50 text-sm mb-1">Active Users</p>
+                    <h2 class="text-2xl font-bold">2,845</h2>
+                </div>
+                <div class="glass p-6 rounded-3xl">
+                    <p class="text-white/50 text-sm mb-1">Conversion</p>
+                    <h2 class="text-2xl font-bold">4.12%</h2>
+                </div>
+
+                <div class="md:col-span-2 glass h-64 rounded-3xl p-8 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-purple-600/10 blur-[100px]"></div>
+                    <h3 class="text-xl font-medium mb-4">Growth Analysis</h3>
+                    <div class="flex items-end gap-2 h-32">
+                        <div class="flex-1 bg-gradient-to-t from-purple-600 to-blue-400 h-[40%] rounded-t-sm"></div>
+                        <div class="flex-1 bg-gradient-to-t from-purple-600 to-blue-400 h-[70%] rounded-t-sm"></div>
+                        <div class="flex-1 bg-gradient-to-t from-purple-600 to-blue-400 h-[90%] rounded-t-sm"></div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl p-8 bg-gradient-to-b from-purple-600 to-indigo-700">
+                    <h3 class="text-xl font-bold mb-2">Upgrade to Pro</h3>
+                    <button class="mt-6 w-full py-3 bg-white text-purple-700 font-bold rounded-xl">Learn More</button>
+                </div>
             </div>
-        </section>
+        </main>
+    </div>
 
-        <nav class="grid-nav">
-            <button class="cybe-btn">NETWORK_LOGS</button>
-            <button class="cybe-btn">PROJECT_FILES</button>
-            <button class="cybe-btn">ENCRYPTION_KEYS</button>
-        </nav>
-    </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
